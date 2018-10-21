@@ -1,0 +1,25 @@
+// 计量箱组列表
+
+// 复选框点击start
+$('.sel-lef img').each(function(index, el) {
+    el.flag = false;
+});
+$(".sel-lef img").on("click", function(even) {
+    console.log('flag====' + even)
+    if (this.flag) {
+        $(this).attr({
+            'src': '../images/Public_icon_Notselected@2x.png',
+            'data-flag': 'off'
+        })
+        this.flag = false;
+    } else {
+        $(this).attr({
+            'src': '../images/Generaloperation_icon_check@2x.png',
+            'data-flag': 'on'
+        })
+        this.flag = true;
+    }
+})
+
+
+// 复选框点击end

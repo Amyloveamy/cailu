@@ -1,0 +1,199 @@
+//进入页面先确定显示哪个tab页
+var page_location = window.sessionStorage.getItem('page_local') ? window.sessionStorage.getItem('page_local') : 'task';
+window.sessionStorage.removeItem('page_local');
+//进入页面先确定显示哪个tab页
+$(function() {
+    //底部tab栏切换start
+
+    $('nav>div').on("click", function() {
+        var tab_page = $(this).attr('data-nav');
+        window.sessionStorage.setItem('page_local', tab_page);
+        switch (tab_page) {
+            case 'task':
+                $('#header>h1').text('营配采录任务');
+                $('#tuxiang_icon').show();
+                break;
+            case 'operation':
+                $('#header>h1').text('营配采录');
+                $('#tuxiang_icon').hide();
+                break;
+            case 'my':
+                $('#header>h1').text('我的');
+                $('#tuxiang_icon').hide();
+                break;
+            default:
+                break;
+        }
+        $(this).addClass('active-item').siblings().removeClass('active-item');
+        $('#' + $(this).attr('data-nav')).addClass('content-active').siblings().removeClass('content-active');
+
+    });
+
+    // 初始化header
+    $('nav>div[data-nav=' + page_location + ']').click();
+
+    // 底部tab栏切换end
+    // 下载工单弹窗start
+    $("#tuxiang_icon").on("click", function() {
+        $(".mui-backdrop").addClass("mui-active");
+        $(".downPop").addClass("active");
+
+
+    })
+    $(".pop-btn").on("click", function() {
+        $(".mui-backdrop").removeClass("mui-active");
+        $(".downPop").removeClass("active");
+    })
+
+
+
+    // 下载工单弹窗end
+
+    // 任务start
+    // 清除按钮数量缓存
+    window.sessionStorage.removeItem('btnNum');
+    // tab栏
+    //进入任务中先确定显示哪个tab页
+    var tab_location = window.sessionStorage.getItem('tab_location') ? window.sessionStorage.getItem('tab_location') : 'daiban';
+    window.sessionStorage.removeItem('tab_location');
+
+    $(".tab-box>.tab-item").on("click", function() {
+        var tab_location = $(this).attr('data-nav');
+        window.sessionStorage.setItem('tab_location', tab_location);
+
+        $(this).addClass("tab-active").siblings().removeClass("tab-active");
+        $('#' + $(this).attr("data-nav")).addClass("tab-con-active").siblings().removeClass("tab-con-active");
+    })
+
+
+    // 初始化tab栏
+    $('.tab-box>div[data-nav=' + tab_location + ']').click()
+
+    // 点击任务列表下载工单 跳转到单设备采录或多设备采录
+
+    // 点击“签收”，调用下载计量容器信息采录接口，
+    //根据出参中“采录设备数量”字段判断，若为“1”，
+    //则跳转到单设备采录页面（case1），否则跳转到采录设备列表页面（case2）
+
+    $(".lis-lis").on("click", function() {
+        var that = $(this);
+        var sign = that.find('.sign').text();
+        if (sign.indexOf('签收') !== -1) {
+
+            //发送post请求，获取数据
+            $.ajax({
+                url: 'https://www.easy-mock.com/mock/5bc002313a25571b6fa4a198/example/bjYdzyGetContDevData',
+                data: {},
+                cache: false,
+                async: true, //异步请求
+                type: "POST",
+                dataType: 'Json',
+                success: function(res) {
+                    alert("下载完成")
+                    that.find('.sign').removeClass('color9191').addClass('colorred').text('完成');
+                    var t = eval(res); //强制转换一下json字符串，生成json对象;
+                    var rewuData = t.data;
+                    console.log(rewuData);
+                    var boxNum = t.data.boxNum;
+                    window.sessionStorage.setItem('boxNum', boxNum);
+                    window.sessionStorage.setItem('rewutData', JSON.stringify(rewuData))
+                }
+            });
+        } else if (sign.indexOf('完成') !== -1) {
+            console.log('点击完成了')
+            var boxNum = window.sessionStorage.getItem('boxNum');
+
+            console.log("boxNum===" + boxNum)
+            if (boxNum == 1) {
+                // 缓存数据
+                // window.sessionStorage.setItem('rewutData', JSON.stringify(rewuData))
+                window.common_user.Click_href('../jlx_xinxi_cailu/jlx_xinxi_cailu.html');
+            } else {
+                // 缓存数据
+                // window.sessionStorage.setItem('rewutData', JSON.stringify(rewuData))
+                window.common_user.Click_href('../cailushebei_list/cailushebei_list.html');
+            }
+        }
+
+
+    })
+
+
+
+    // 代办
+    // var boxNum = 1;
+    // if (boxNum == 1) {
+    //     $("#daiban .lis-lis").on("click", function() {
+    //         window.common_user.Click_href('../jlx_xinxi_cailu/jlx_xinxi_cailu.html');
+    //     })
+    // } else {
+    //     $("#daiban .lis-lis").on("click", function() {
+    //         window.common_user.Click_href('../cailushebei_list/cailushebei_list.html');
+    //     })
+
+    // }
+    // 已完成
+    var boxNum = 2;
+    if (boxNum == 1) {
+        $("#yiwancheng .lis-lis").on("click", function() {
+            window.common_user.Click_href('../jlx_xinxi_cailu/jlx_xinxi_cailu.html');
+        })
+    } else {
+        $("#yiwancheng .lis-lis").on("click", function() {
+            window.common_user.Click_href('../cailushebei_list/cailushebei_list.html');
+        })
+
+    }
+
+    // 手动给任务列表盒子设置高
+    // var screenHeight = window.screen.height;
+    var screenHeight = window.screen.availHeight;
+
+    console.log("screenHeight===" + screenHeight)
+    console.log("header===" + $("#header").outerHeight(true))
+    console.log("tab-box===" + $(".tab-box").outerHeight(true))
+    console.log("ipt-box===" + $(".ipt-box").outerHeight(true))
+    console.log("bottom_tab===" + $(".bottom_tab").outerHeight(true))
+
+
+    var ulsHeight = screenHeight - $("#header").outerHeight(true) - $(".tab-box").outerHeight(true) - $(".ipt-box").outerHeight(true) - $(".bottom_tab").outerHeight(true);
+    // var ulsHeight = screenHeight - $("#header").height() - $(".tab-box").height() - 57.6 - $(".bottom_tab").height();
+    $(".tab-content .list").height(ulsHeight);
+    console.log("ulsHeight===" + ulsHeight)
+
+
+
+    // 任务end
+
+    // 功能start
+    // 功能跳转到计量箱组
+    $("#jiliang_zu").on("click", function() {
+        window.common_user.Click_href('../jiliangxiang_zu/jiliangxiang_zu.html');
+    })
+
+
+    // 功能end
+
+
+    // 我的start
+    $("#details").on("click", function() {
+        window.common_user.Click_href('./mine/accountInfor.html');
+    })
+    $("#binding").on("click", function() {
+        window.common_user.Click_href('./mine/bindAccount.html');
+    })
+    $("#about").on("click", function() {
+        window.common_user.Click_href('./mine/about.html');
+    })
+
+    // 我的end
+
+
+
+
+
+
+
+
+
+})

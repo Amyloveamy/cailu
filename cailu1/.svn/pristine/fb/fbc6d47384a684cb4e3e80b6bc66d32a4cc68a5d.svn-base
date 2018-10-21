@@ -1,0 +1,12 @@
+/* 查找台区 */
+
+.top-uls {
+    background-color: #f4f4f4;
+    padding: 0;
+}
+
+.top-lis {
+    margin-top: .2rem;
+    background-color: #fff;
+    padding: .2rem;
+}

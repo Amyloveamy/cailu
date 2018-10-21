@@ -1,0 +1,218 @@
+/* 计量箱组列表 */
+
+
+/* 头部右上角弹出框start */
+
+.mui-icon-more-filled:before {
+    clear: both;
+    content: '';
+    background: url(../../images/topbar_icon_operation.png) no-repeat center;
+    height: 0.48rem;
+    width: 0.48rem;
+    background-size: 0.48rem 0.48rem;
+}
+
+.mui-icon {
+    top: 0;
+    right: .2rem;
+}
+
+#popover {
+    height: auto;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -0.1rem;
+    background-color: #282828;
+    position: absolute;
+    right: .2rem;
+    top: 1.4rem;
+    display: none;
+    z-index: 2000;
+}
+
+#popover .mui-table-view-cell {
+    height: 0.7rem;
+    font-size: 0.28rem;
+    color: #ffffff;
+    white-space: nowrap;
+    background-color: #282828;
+    padding: 0 0.45rem;
+    text-align: center;
+    line-height: 0.7rem;
+    display: block;
+}
+
+.mui-popover,
+.mui-popover .mui-popover-arrow:after,
+.mui-popover .mui-table-view {
+    background-color: #282828;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+/* 遮罩 */
+
+.mui-backdrop {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.mui-backdrop.mui-active {
+    display: block;
+}
+
+
+/* 三角箭头 */
+
+.mui-popover .mui-popover-arrow {
+    position: absolute;
+    z-index: 1000;
+    top: -25px;
+    left: 44px;
+    overflow: hidden;
+    width: 26px;
+    height: 26px;
+}
+
+.mui-popover .mui-popover-arrow:after {
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    content: ' ';
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 3px;
+    background-color: #282828;
+}
+
+
+/* 头部右上角弹出框end */
+
+
+/* 中间部分列表start */
+
+.content {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+
+.select-list {
+    width: 100%;
+    height: auto;
+}
+
+.sel-uls {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: .2rem;
+}
+
+.sel-uls .sel-lis {
+    width: 100%;
+    height: 1.5rem;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.sel-uls .sel-lis>div {
+    height: 100%;
+}
+
+.sel-uls .sel-lis .sel-lef {
+    width: 15%;
+    background-color: #e6e6e6;
+    position: relative;
+}
+
+.sel-uls .sel-lis .sel-rig {
+    width: 85%;
+    position: relative;
+}
+
+.sel-uls .sel-lis .sel-rig .sel-con {
+    height: 100%;
+    padding-right: 1rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    padding-left: .6rem;
+}
+
+.sel-uls .sel-lis .sel-rig .sel-con>div {
+    font-size: .28rem;
+    line-height: .54rem;
+    width: 4.3rem;
+    overflow: hidden;
+}
+
+
+/* 采录标识 */
+
+.cl-rig {
+    width: 1.2rem;
+    height: .6rem;
+    line-height: .6rem;
+    background-color: #366ca7;
+    border-radius: .1rem;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: .2rem;
+    font-size: .26rem;
+}
+
+
+/* 编辑图标 */
+
+.edit-btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: .2rem;
+}
+
+.edit-btn>span {
+    display: inline-block;
+    font-size: .28rem;
+    line-height: .3rem;
+}
+
+.edit-btn img {
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* 多选框 */
+
+input[type=checkbox] {
+    /* -webkit-appearance: checkbox; */
+    -webkit-appearance: none;
+}
+
+.sel-lef img {
+    width: 0.48rem;
+    height: 0.48rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.24rem;
+    margin-left: -0.24rem;
+}
+
+
+/* 中间部分列表end */

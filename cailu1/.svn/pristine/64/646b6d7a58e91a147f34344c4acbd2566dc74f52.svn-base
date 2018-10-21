@@ -1,0 +1,207 @@
+/* 计量箱信息采录 */
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: .9rem;
+    bottom: 0.2rem;
+    overflow: auto;
+}
+
+
+/* 头部展示信息start */
+
+.top-infor {
+    width: 100%;
+    min-height: 2rem;
+    margin-top: .2rem;
+}
+
+.top-uls {
+    width: 100%;
+    padding: .2rem;
+    margin-bottom: .2rem;
+    background-color: #fff;
+}
+
+.top-infor .top-lis {
+    font-size: .28rem;
+    line-height: .46rem;
+}
+
+.top-infor .top-lis.double {
+    display: flex;
+}
+
+.top-infor .top-lis.double>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.top-lis>div>div {
+    display: inline-block;
+}
+
+
+/* 头部展示信息end */
+
+
+/* 下面输入列表start */
+
+.bottom-list {
+    width: 100%;
+    margin-top: .2rem;
+}
+
+.bottom-list .btm-uls {
+    width: 100%;
+}
+
+.bottom-list .btm-uls .btm-lis {
+    height: .9rem;
+    line-height: .9rem;
+    padding-left: .25rem;
+    background-color: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: .28rem;
+}
+
+.bottom-list .btm-uls .btm-lis:last-child {
+    border-bottom: none;
+}
+
+.bottom-list .btm-uls .btm-lis .xinxilei {
+    display: inline-block;
+    height: .9rem;
+}
+
+.bottom-list .btm-uls .btm-lis .xuanze_xiang {
+    height: .9rem;
+    padding-right: .8rem;
+    position: relative;
+    font-size: .28rem;
+}
+
+.bottom-list .btm-uls .btm-lis .xuanze_xiang select {
+    font-size: 0.28rem;
+}
+
+.bottom-list .btm-uls .btm-lis input {
+    width: 100%;
+    border: none;
+    margin: 0;
+    text-align: right;
+    font-size: 0.28rem;
+}
+
+.xuanzhe_xiang_tu {
+    position: absolute;
+    right: .1rem;
+    top: 0.22rem;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.xuanzhe_xiang_tu.scan {
+    right: .2rem;
+}
+
+.select_ipt {
+    position: relative;
+    padding-right: .4rem;
+}
+
+.select_ipt .xuanzhe_xiang_tu {
+    right: -.1rem;
+}
+
+.required {
+    color: #C32244 !important;
+}
+
+
+/* 下面输入列表end */
+
+
+/* 刷新按钮start */
+
+.refresh {
+    width: 100%;
+    height: .8rem;
+    position: relative;
+}
+
+.refresh .ref-btn {
+    width: 1rem;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    background-color: #366ca7;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.25rem;
+    right: .2rem;
+    color: #fff;
+}
+
+
+/* 刷新按钮start */
+
+
+/* 两个按钮start */
+
+.double-btn {
+    margin: 0 .2rem;
+    height: auto;
+    margin-top: .4rem;
+}
+
+.double-btn .d-btn {
+    width: 50%;
+    height: .8rem;
+    font-size: .3rem;
+    line-height: .8rem;
+    text-align: center;
+    color: #fff;
+    background: -webkit-linear-gradient(top, #676767, #aeaeae);
+    margin-top: .24rem;
+    margin-bottom: .2rem;
+}
+
+.color366 {
+    background: -webkit-linear-gradient(top, #366ca7, #366ca7)!important;
+}
+
+.double-btn .d-btn.dou-lef {
+    top: 0;
+    left: 0;
+}
+
+.double-btn .d-btn.dou-rig {
+    top: 0;
+    right: 0;
+}
+
+.pb200 {
+    padding-bottom: 2rem!important;
+}
+
+.three-btn {
+    display: flex;
+}
+
+.three-btn .d-btn {
+    flex: 1;
+    margin-right: .22rem;
+}
+
+.three-btn .d-btn:last-child {
+    margin-right: 0;
+}
+
+
+/* 两个按钮end */

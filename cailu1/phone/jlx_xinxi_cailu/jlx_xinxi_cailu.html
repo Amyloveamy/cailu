@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>计量箱信息采录</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/mui.min.css" /> -->
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./css/jlx_xinxi_cailu.css" />
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body id="app">
+    <header id="header" class="mui-bar mui-bar-nav header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">计量箱信息采录</h1>
+    </header>
+
+    <div class="content">
+        <div class="top-infor">
+            <ul class="top-uls">
+                <li class="top-lis double">
+                    <div>
+                        <span>申请编号：</span>
+                        <div class="appNo"> 565454</div>
+                    </div>
+                    <div>
+                        <span>用户编号：</span>
+                        <div class="consNo"> 4567890</div>
+                    </div>
+                </li>
+                <li class="top-lis">
+                    <div><span>用户名称：</span>
+                        <div class="consName">华北电力大学</div>
+                    </div>
+                </li>
+                <li class="top-lis">
+                    <div>
+                        <span>用电地址：</span>
+                        <div class="elecAddr">华北电力大学</div>
+                    </div>
+                </li>
+                <li class="top-lis double">
+                    <div class="top-item">
+                        <span>接线方式：</span>
+                        <div class="wiringMode">无</div>
+                    </div>
+                    <div class="top-item">
+                        <span>电压等级：</span>
+                        <div class="voltCode">220V</div>
+                    </div>
+                </li>
+                <li class="top-lis">
+                    <div>
+                        <span>线路名称：</span>
+                        <div class="lineName">220V</div>
+                    </div>
+                </li>
+                <li class="top-lis">
+                    <div>
+                        <span>台区名称：</span>
+                        <div class="tgName">华北电力大学</div>
+                    </div>
+                </li>
+                <li class="top-lis double">
+                    <div>
+                        <span>变压器标识：</span>
+                        <div class="tranIde">4567890</div>
+
+                    </div>
+                    <div>
+                        <span>计量箱方案标识：</span>
+                        <div class="boxSchemeId">4567890</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-list">
+            <form action="" class="">
+                <ul class="btm-uls">
+                    <!-- 计量箱扫码 -->
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">计量箱条码编号</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" placeholder="请输入信息" id="tiaoma_bianhao" data-name="" data-value="" onKeyUp="value=value.replace(/\D/g,'')" onafterpaste="value=value.replace(/\D/g,'')">
+                            <img class="xuanzhe_xiang_tu scan" src="./../images/u577.png" alt="">
+                        </div>
+                    </li>
+                    <!-- 下拉框 -->
+                    <li class="btm-lis" id="gjshebei_leixing">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">挂接设备类型</span>
+                        <div class="xuanze_xiang fr">
+                            <input id="guajie_shebei" type="text" placeholder="请输入信息" value="杆塔" readonly>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <!-- 带刷新图标 -->
+                    <li class="btm-lis" id="gjshebei_name">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">挂接设备名称</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <div class="select_ipt">
+                                <input type="text" id="guajie_name" placeholder="请输入信息" value="其他" readonly>
+                                <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                            </div>
+
+                            <img id="shuaxin_icon" class="xuanzhe_xiang_tu scan" src="./../images/shuaxin_icon.jpg" alt="">
+                        </div>
+                    </li>
+                    <!-- 输入信息 -->
+                    <li class="btm-lis" id='niguajie_shebei_li'>
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">拟挂接设备</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" id='niguajie_shebei' placeholder="请输入信息">
+                        </div>
+                    </li>
+                    <li class="btm-lis" id="guajie_shebei_biaoshi_li">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">挂接设备标识</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <span class="guajieshebei_biaoshi">3</span>
+                        </div>
+                    </li>
+                    <li class="btm-lis" id="xiangbie_li">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">相别</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" id="xiangbie" placeholder="请输入信息" value="x" readonly>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <!-- 刷新按钮 -->
+                <div class="refresh" id="refresh">
+                    <div class="ref-btn">刷新</div>
+                </div>
+                <ul class="btm-uls">
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">坐标经度</span>
+                        <div class="xuanze_xiang fr">
+                            <span id="posX">123.3</span>
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">坐标纬度</span>
+                        <div class="xuanze_xiang fr">
+                            <span id="posY">123.39</span>
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <!-- <span class="required fl">*</span> -->
+                        <span class="xinxilei fl">坐标高程</span>
+                        <div class="xuanze_xiang fr">
+                            <span id="posZ">12.3</span>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+
+            <!-- 两个按钮 -->
+            <div class="double-btn clear pb200" id="doubleBtn">
+                <!-- 按钮背景色默认灰色 color366 蓝色 -->
+                <div class="d-btn dou-lef color366 fl" id="saveBtn">保存</div>
+                <div class="d-btn dou-rig fr" id="sunmitBtn">提交</div>
+            </div>
+            <!-- 三个按钮 -->
+            <div class="double-btn three-btn pb200" id="treeBtn">
+                <!-- 按钮背景色默认灰色 color366 蓝色 -->
+                <div class="d-btn dou-lef color366" id="topShebei">上一设备</div>
+                <div class="d-btn dou-rig color366">保存</div>
+                <div class="d-btn dou-rig color366" id="nextShebei">下一设备</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/wu-ui.min.js"></script>
+    <script type="text/javascript" src="../js/returnJson.js"></script>
+    <script type="text/javascript" src="js/jlx_xinxi_cailu.js"></script>
+</body>
+
+</html>

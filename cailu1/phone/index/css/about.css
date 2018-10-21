@@ -1,0 +1,69 @@
+body {
+    background: #f4f4f4;
+}
+
+.header {
+    height: .9rem;
+}
+
+.header img {
+    width: .32rem;
+}
+
+.scrollWrapper {
+    position: absolute;
+    top: .9rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.introduction {
+    margin-top: .2rem;
+    background: #fff;
+    box-sizing: border-box;
+    padding: .4rem .3rem;
+    border: 1px solid #dfdfdf;
+    border-width: 1px 0;
+}
+
+.introduction img {
+    width: 100%;
+    margin-bottom: .16rem;
+}
+
+.introduction p {
+    line-height: .52rem;
+    font-size: .28rem;
+    color: #555;
+}
+
+.deviceInfor {
+    margin-top: .2rem;
+    border: 1px solid #dfdfdf;
+    border-width: 1px 0;
+    background: #fff;
+}
+
+.deviceInfor p {
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
+    color: #555555;
+    padding-left: .3rem;
+    box-sizing: border-box;
+}
+
+.deviceInfor p:nth-child(1) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.recordInformation {
+    position: fixed;
+    height: .48rem;
+    bottom: .5rem;
+    width: 100%;
+    font-size: .28rem;
+    line-height: .48rem;
+    text-align: center;
+    color: #555555;
+}

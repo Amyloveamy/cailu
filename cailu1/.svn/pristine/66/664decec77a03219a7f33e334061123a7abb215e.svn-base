@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../css/accountInfor.css"/>
+    <script type="text/javascript" src="../../js/rem.js"></script>
+    <title>我的-账户信息</title>
+</head>
+<body>
+<header id="header" class="mui-bar mui-bar-nav header">
+    <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+    <h1 class="mui-title">账户信息</h1>
+</header>
+<div class="information">
+    <p>
+        <span class="inforLeft">用户账号:</span>
+        <span class="inforRight" id="userNo">test111</span>
+    </p>
+    <p>
+        <span class="inforLeft">供电单位名称:</span>
+        <span class="inforRight" id="orgName">国网信通产业集团</span>
+    </p>
+    <p>
+        <span class="inforLeft">营销用户名称:</span>
+        <span class="inforRight" id="shangji">电力营配管理事业部</span>
+    </p>
+    <p>
+        <span class="inforLeft">用户账号:</span>
+        <span class="inforRight" id="sysUserName">HF11Admintest</span>
+    </p>
+    <p>
+        <span class="inforLeft">终端IMEI:</span>
+        <span class="inforRight" id="imei">8602020384617293 </span>
+    </p>
+    <p>
+        <span class="inforLeft">账号解绑</span>
+        <button class="inforRight refreshbtn" id="refresh_lianjie">解绑</button>
+        <!-- <span class="inforRight" id="lianjie">解绑</span> -->
+    </p>
+</div>
+
+<!--<div class="jinweidu">点击获取地理位置</div>-->
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./../../js/common.js"></script>
+<script type="text/javascript" src="../js/accountInfor.js"></script>
+<!-- <script type="text/javascript" src="../../js/bzyd.common.js"></script> -->
+<script>
+    
+</script>
+</body>
+</html>

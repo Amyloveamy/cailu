@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>电表列表</title>
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./../jiliangxiang_zu/css/jiliangxiang_zu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dianbiao_list.css" />
+
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav mui-bar-transparent header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">电表列表</h1>
+        <!-- 三点弹出菜单 -->
+        <a href="#popover" id="openPopover" class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+    </header>
+    <div class="content">
+        <div class="select-list">
+            <ul class="sel-uls">
+                <li class="sel-lis">
+                    <div class="sel-lef fl">
+                        <input type="checkbox" value="ON">
+                        <img src="../images/Public_icon_Notselected@2x.png" data-flag="off" alt="" />
+                    </div>
+                    <div class="sel-rig fl">
+                        <div class="sel-con">
+                            <div>未分组</div>
+                            <div>该分组下包含0个计量箱</div>
+                        </div>
+
+                        <div class="cl-rig">
+                            采录
+                        </div>
+                    </div>
+                </li>
+                <li class="sel-lis">
+                    <div class="sel-lef fl">
+                        <input type="checkbox" value="ON">
+                        <img src="../images/Public_icon_Notselected@2x.png" data-flag="off" alt="" />
+                    </div>
+                    <div class="sel-rig fl">
+                        <div class="sel-con">
+                            <div>未分组</div>
+                            <div>该分组下包含1个计量箱</div>
+                        </div>
+
+                        <div class="cl-rig">
+                            采录
+                        </div>
+                    </div>
+                </li>
+                <li class="sel-lis">
+                    <div class="sel-lef fl">
+                        <input type="checkbox" value="ON">
+                        <img src="../images/Public_icon_Notselected@2x.png" data-flag="off" alt="" />
+                    </div>
+                    <div class="sel-rig fl">
+                        <div class="sel-con">
+                            <div>未分组</div>
+                            <div>该分组下包含2个计量箱</div>
+                        </div>
+
+                        <div class="cl-rig">
+                            采录
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 一个按钮 -->
+        <!-- <div class="btn-box">
+            <div class="btn">上传</div>
+        </div> -->
+    </div>
+
+    <!-- 右上角弹出菜单 mui-active 显示-->
+    <div class="mui-backdrop"></div>
+    <div id="popover" class="mui-popover">
+        <ul class="mui-table-view clearfix">
+            <li class="mui-table-view-cell add">新增</li>
+            <li class="mui-table-view-cell delate">删除</li>
+            <li class="mui-table-view-cell edit">编辑</li>
+        </ul>
+        <div class="mui-popover-arrow"></div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="js/dianbiao_list.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+/**
+ * Created by Administrator on 2018/9/11 0011.
+ */
+//全局变量
+var login_userdata= {
+    "password":"111111",
+    "ydzyUserNo":"hzy123",
+    "sysUserName": "",//用户账号
+    "userName": "",//用户名称
+    "orgNo": "34401",//供电单位编号
+    "deptNo": "",//部门编号
+    "orgName": "",//供电单位名称
+    "deptName": "",//部门名称
+    "bureauNo": "",//父级单位编号
+    "bureauName": "",//父级单位名称
+    "sysAdmin": "",//是否是系统管理员
+    "provinceCode": "",//省码
+    "provinceName": "",//省名称
+    "cityCode": "",//市码
+    "cityName": "",//市名称
+    "countyCode": "",//区县码
+    "countyName": "",//区县名称
+    "common_termNo": "12345",
+    "common_phoneImei": "12345",
+    "common_source": "12345",
+    "common_target": "12345",
+    "common_userNo": "HF01",
+};//var commondata=window.common_user.get_sessiondata("loginData");
+var url="http://192.168.110.110:16012/restfulApi/forwardRequest";
+var commondata=login_userdata;
+var common_orgNo=commondata.orgNo;
+var common_termNo=commondata.common_termNo;
+var common_phoneImei=commondata.common_phoneImei;
+var common_source=commondata.common_source;
+var common_target=commondata.common_target;
+var common_userNo=commondata.common_userNo;
+//全局变量
+
+//最上角返回
+$('#go_back').on("click",function() {
+    history.go(-1);
+});
+var BZYD={
+    returnHttpServerData:function(res){
+
+    },
+    data:function(code, datas){
+        if (code != null && datas != null) {
+            var data = {
+                "data": datas,
+                "orgNo": window.sessionStorage.getItem("orgNo"),
+                "phoneImei": window.sessionStorage.getItem("phoneImei"),
+                "serviceCode": code,
+                "source": "",
+                "target": "",
+                "userNo": window.sessionStorage.getItem("userNo")
+            };
+            return data;
+        }
+    }
+};
+window.common_user={
+    //跳转页面
+    Click_href:function(url){
+        window.location.href=url;
+    },
+
+//调用接口时参数转换统一json字符串
+    get_Jsondata:function (code, datas) {
+        if(code != null && datas != null) {
+            var data = {
+                "data": datas,
+                "phoneImei": common_phoneImei,
+                "serviceCode": code,
+                "source": common_source,
+                "target": common_target,
+            };
+            data=JSON.stringify(data);
+            console.log('前端请求接口---' + code+"---"+"请求json串---"+data);
+            return data;
+        }
+    },
+
+//ajax请求函数，传入接口定义参数，成功回调函数，失败回调函数
+    ajaxfuncURL:function(url,restData,callback) {//1：接口输入参数，2：成功后回调函数名称
+        var  ajaxfuncURL_ajax=$.ajax({
+            url: url,
+            type: "post",
+            data: restData,
+            timeout: 10000,
+            dataType: 'json',
+            contentType: 'application/json;charset=utf-8',
+            async: true,
+            //success: function(res){
+            //    console.log(JSON.stringify(res));
+            //   ;
+            //},
+            success:function(res){
+                console.log(JSON.stringify(res))
+                callback(res)
+            },
+            error: function (res) {
+                console.log("网络失败")
+                window.common_user.error_alert("接口失败");
+            },
+            complete : function(status){ //请求完成后最终执行参数
+                if(status=='timeout'){//超时,status还有success,error等值的情况
+                    openToast("网络请求超时","icon-error")
+                    ajaxfuncURL_ajax.abort();
+                }
+            }
+        });
+    },
+
+//成功回调函数
+    show_alert:function(res){
+        console.log("后台返回的参数---"+res)
+    },
+    show_console:function(res){
+        //console.log(res)
+        window.android.show(res);
+    },
+//失败处理函数
+    error_alert:function(res){
+        openToast(res,"icon-error")
+    },
+//Loading
+    count:function(){
+        $({countNum: $('#counter').text()}).animate({countNum: 100}, {
+            duration: 3000,
+            easing:'linear',
+            step: function() {
+                $('#counter').text(Math.floor(this.countNum) + '%');
+            },
+            complete: function() {
+                $('#counter').fadeOut(200);
+                $('.complete').addClass('fadein');
+                $('.ball').fadeOut(200);
+                $('#button').fadeOut(100);
+                setTimeout(function() {
+                    $('.buttonContainer').removeClass('active');
+                    $('.complete').removeClass('fadein');
+                    $('#button').fadeIn(200);
+                }, 500);
+            }
+        });
+    },
+
+//过滤<>
+    safeStr:function (str){
+        return str.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    },
+
+//获取缓存
+    get_sessiondata:function(name){
+        var sessiondata=window.sessionStorage.getItem(name);
+        if(sessiondata&&sessiondata!=null&&sessiondata!=undefined&&sessiondata!=""){
+            sessiondata=window.common_user.safeStr(sessiondata);
+        }else{
+            if(name=="page_local"){
+                sessiondata="task"
+            }else{
+                sessiondata="false"
+            }
+
+        }
+        return sessiondata;
+    },
+
+//设置缓存
+    set_sessiondata:function(name,value){
+        value=window.common_user.safeStr(value);
+        window.sessionStorage.setItem(name,value);
+    },
+
+    consoleShow:function(string) {
+    console.log(string);
+    // window.android.show(string);
+}
+}
+

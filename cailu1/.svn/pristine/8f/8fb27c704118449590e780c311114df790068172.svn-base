@@ -1,0 +1,66 @@
+// 计量箱组列表
+
+// 点击每一项跳转到 计量箱列表
+$(".sel-lis").on("click", function() {
+    console.log("跳转到 计量箱列表")
+    window.common_user.Click_href('../jiliangxiang_list/jiliangxiang_list.html');
+})
+
+// 复选框点击start
+$('.sel-lef img').each(function(index, el) {
+    el.flag = false;
+});
+$(".sel-lef img").on("click", function(even) {
+    console.log('flag====' + even)
+    if (this.flag) {
+        $(this).attr({
+            'src': '../images/Public_icon_Notselected@2x.png',
+            'data-flag': 'off'
+        })
+        this.flag = false;
+    } else {
+        $(this).attr({
+            'src': '../images/Generaloperation_icon_check@2x.png',
+            'data-flag': 'on'
+        })
+        this.flag = true;
+    }
+})
+
+
+// 复选框点击end
+
+// 菜单弹出框start
+$("#openPopover").on("click", function() {
+    PopoverShow();
+})
+$(".mui-backdrop").on("click", function() {
+    PopoverHide();
+})
+
+// 点击新增跳转 计量箱组
+$("#popover .add").on("click", function() {
+    console.log("跳转到计量箱组")
+    window.common_user.Click_href('../jlx_zu_cailu/jlx_zu_cailu.html');
+    PopoverHide();
+})
+
+// 点击编辑跳转 计量箱组
+$("#popover .edit").on("click", function() {
+    console.log("跳转到计量箱组")
+    window.common_user.Click_href('../jlx_zu_cailu/jlx_zu_cailu.html');
+    PopoverHide();
+})
+
+// 弹窗弹出
+function PopoverShow() {
+    $("#popover").show();
+    $(".mui-backdrop").addClass("mui-active");
+}
+// 弹窗隐藏
+function PopoverHide() {
+    $("#popover").hide();
+    $(".mui-backdrop").removeClass("mui-active");
+}
+
+// 菜单弹出框end

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>电表</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/mui.min.css" /> -->
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./../jlx_xinxi_cailu/css/jlx_xinxi_cailu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/diaobiao_cailu.css" />
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">电表</h1>
+    </header>
+
+    <div class="content">
+
+        <div class="bottom-list">
+            <form action="" class="">
+                <ul class="btm-uls">
+                    <!-- 电表条码编号扫码 -->
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">电表条码编号</span>
+                        <div class="xuanze_xiang fr">
+                            <span>0200058344</span>
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <img class="xuanzhe_xiang_tu scan" src="./../images/u577.png" alt="">
+                        </div>
+                    </li>
+                    <!-- 下拉框 -->
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">行</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                <option value="">3</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">列</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                    <option value="">6</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+
+            </form>
+
+            <!-- 一个按钮 -->
+            <div class="btn-box">
+                <div class="btn">保存</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="js/diaobiao_cailu.js"></script>
+</body>
+
+</html>

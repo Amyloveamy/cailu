@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>采录设备列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./css/cailushebei_list.css" />
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav mui-bar-transparent header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">采录设备列表</h1>
+        <!-- 三点弹出菜单 -->
+        <a href="#popover" id="openPopover" class="mui-icon mui-icon-more-filled mui-pull-right"></a>
+    </header>
+    <div class="cailu-content">
+        <div class="cl-title">
+            <div> <span>已采录：</span>1</div>
+            <div> <span>采录中：</span>1</div>
+            <div> <span>未采录：</span>1</div>
+        </div>
+        <div class="cl-list" id="cl-list">
+            <ul class="cl-uls">
+                <li class="cl-lis clear">
+                    <div class="cl-lef fl">
+                        <div><span>计量箱资产编号：</span>4567890</div>
+                        <div><span>计量箱方案标识：</span>4567890</div>
+                    </div>
+                    <div class="cl-rig">
+                        已采录
+                    </div>
+                </li>
+                <li class="cl-lis clear">
+                    <div class="cl-lef fl">
+                        <div><span>计量箱资产编号：</span>4567890</div>
+                        <div><span>计量箱方案标识：</span>4567890</div>
+                    </div>
+                    <div class="cl-rig">
+                        采录中
+                    </div>
+                </li>
+                <li class="cl-lis clear">
+                    <div class="cl-lef fl">
+                        <div><span>计量箱资产编号：</span>4567890</div>
+                        <div><span>计量箱方案标识：</span>4567890</div>
+                    </div>
+                    <div class="cl-rig">
+                        未采录
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- 一个按钮 -->
+        <div class="btn-box">
+            <div class="btn">上传</div>
+        </div>
+
+
+
+
+
+
+        <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+        <!-- <script type="text/javascript" src="../js/mui.min.js"></script> -->
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="js/cailushebei_list.js"></script>
+</body>
+
+</html>

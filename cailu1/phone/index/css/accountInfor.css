@@ -1,0 +1,68 @@
+body {
+    background: #f4f4f4;
+}
+
+.header {
+    height: .9rem;
+}
+
+.header img {
+    width: .32rem;
+}
+
+.information {
+    border-top: 1px solid #dfdfdf;
+    margin-top: .2rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.information p {
+    overflow: hidden;
+    height: .88rem;
+    border-bottom: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    padding: 0 .3rem;
+    font-size: .28rem;
+    color: #555;
+    line-height: .88rem;
+}
+
+.inforLeft {
+    float: left;
+}
+
+.inforRight {
+    float: right;
+}
+.refreshbtn{
+    width: 1.5rem;
+    height: .5rem;
+    line-height: .5rem;
+    font-size: .28rem;
+    margin-top: .19rem;
+    margin-left: .2rem;
+    background-color: #4e64f0;
+    color: #fff;
+    border: none;
+    border-radius: .1rem;
+    outline:none;
+}
+
+.jinweidu {
+    width: 50%;
+    height: 1rem;
+    background: #009784;
+    position: fixed;
+    border: 0;
+    bottom: 0rem;
+    text-align: center;
+    font-size: 0.4rem;
+    line-height: 1rem;
+    left: 25%;
+    color: #f9f9f9;
+    z-index: 999;
+}
+.mui-title {
+    background-color: #3c373e;
+}

@@ -1,0 +1,27 @@
+
+/* content开始 */
+.bind-account{
+    width: 100%;
+    height: auto;
+}
+.bind-ul{
+    width: 100%;
+    height: auto;
+    margin-top: .4rem;
+    background-color: #fff;
+}
+.bind-ul .bind-lis:nth-child(1){
+    border-top: .02rem solid #eee;
+}
+.bind-ul .bind-lis{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: .02rem solid #eee;
+}
+.bind-ul .bind-lis input{
+    width: 100%;
+    height: 100%;
+    padding: .2rem .2rem;
+}
+/* content结束 */

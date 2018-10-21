@@ -1,0 +1,101 @@
+/**
+ * Created by Administrator on 2018/9/11 0011.
+ */
+    //全局变量
+    var url="http://192.168.106.210:8088/iec/getIecres";
+    var common_orgNo="34401";
+    var common_termNo="1234456565";
+    var common_phoneImei="34234234234";
+    var common_source="04";
+    var common_target="05";
+    var common_userNo="HF25";
+
+//最上角返回
+$('#go_back').on("click",function() {
+    history.go(-1);
+});
+
+window.common_user={
+    //跳转页面
+    Click_href:function(url){
+    window.location.href=url;
+},
+
+//调用接口时参数转换统一json字符串
+    get_Jsondata:function (code, datas) {
+    if(code != null && datas != null) {
+        var data = {
+            "data": datas,
+            "phoneImei": common_phoneImei,
+            "serviceCode": code,
+            "source": common_source,
+            "target": common_target,
+        };
+        data=JSON.stringify(data);
+        console.log('前端请求接口---' + code+"---"+"请求json串---"+data)
+        return data;
+    }
+},
+
+//ajax请求函数，传入接口定义参数，成功回调函数，失败回调函数
+    ajaxfuncURL:function(restData,callback) {
+    $.ajax({
+        url: url,
+        type: "post",
+        data: restData,
+        timeout: 1000,
+        dataType: 'json',
+        contentType: 'application/json;charset=utf-8',
+        async: false,
+        success: function (res) {
+            callback(res);
+        },
+        error: function (res) {
+            window.common_user.error_alert(res);
+        },
+        complete : function(status){ //请求完成后最终执行参数
+            if(status=='timeout'){//超时,status还有success,error等值的情况
+                alert("超时")
+            }
+        }
+    });
+},
+//成功回调函数
+    show_alert:function(res){
+       console.log("后台返回的参数---"+res)
+    },
+
+//失败处理函数
+    error_alert:function(res){
+      alert("后台请求失败！")
+   },
+//Loading
+    count:function(){
+    $({countNum: $('#counter').text()}).animate({countNum: 100}, {
+        duration: 3000,
+        easing:'linear',
+        step: function() {
+            $('#counter').text(Math.floor(this.countNum) + '%');
+        },
+        complete: function() {
+            $('#counter').fadeOut(200);
+            $('.complete').addClass('fadein');
+            $('.ball').fadeOut(200);
+            $('#button').fadeOut(100);
+            setTimeout(function() {
+                $('.buttonContainer').removeClass('active');
+                $('.complete').removeClass('fadein');
+                $('#button').fadeIn(200);
+            }, 500);
+        }
+    });
+}
+}
+// 跳转页面
+function jump_url(selectName,url){
+    $(selectName).on("click",function(){
+        window.common_user.Click_href(url);
+    })
+}
+
+

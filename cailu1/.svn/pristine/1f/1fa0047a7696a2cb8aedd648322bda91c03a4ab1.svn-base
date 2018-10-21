@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>查找台区</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/mui.min.css" /> -->
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./../jlx_xinxi_cailu/css/jlx_xinxi_cailu.css" />
+    <link rel="stylesheet" type="text/css" href="./../findAccessPoint/css/findAccessPoint.css" />
+    <link rel="stylesheet" type="text/css" href="./css/findTaiqu.css" />
+    <script type="text/javascript" src="../js/rem.js"></script>
+
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">查找台区</h1>
+    </header>
+
+    <div class="content">
+
+        <div class="bottom-list">
+            <form action="" class="">
+                <ul class="btm-uls">
+                    <!-- 下拉框 -->
+                    <li class="btm-lis">
+                        <!-- <span class="required fl">*</span> -->
+                        <span class="xinxilei fl">供电单位</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                    <!-- 上页选择台区对应变压器名称列表 -->
+                                        <option value="">海淀供电公司</option>
+                                        <option value="">海淀供电公司</option>
+                                        <option value="">海淀供电公司</option>
+                                    </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <!-- 输入信息 -->
+                    <li class="btm-lis">
+                        <!-- <span class="required fl">*</span> -->
+                        <span class="xinxilei fl">台区名称</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" placeholder="请输入信息">
+                        </div>
+                    </li>
+                    <!-- 下拉框 -->
+                    <li class="btm-lis">
+                        <!-- <span class="required fl">*</span> -->
+                        <span class="xinxilei fl">供电电压</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                        <!-- 上页选择台区对应变压器名称列表 -->
+                                            <option value="">36V</option>
+                                            <option value="">36V</option>
+                                            <option value="">36V</option>
+                                        </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+
+                </ul>
+            </form>
+
+            <div class="btn-box">
+                <div class="btn">查找</div>
+            </div>
+        </div>
+
+        <!-- 接入点列表 -->
+        <div class="top-infor mt40">
+            <ul class="top-uls">
+                <li class="top-lis">
+                    <div class="top-item">
+                        <div><span>接入点标识：</span>565454</div>
+                    </div>
+                    <div class="top-item">
+                        <div><span>接入点名称：</span>台区1</div>
+                    </div>
+                    <div class="top-item">
+                        <div><span>接入点位置：</span>华北电力大学</div>
+                    </div>
+                </li>
+                <li class="top-lis">
+                    <div class="top-item">
+                        <div><span>接入点标识：</span>565454</div>
+                    </div>
+                    <div class="top-item">
+                        <div><span>接入点名称：</span>台区1</div>
+                    </div>
+                    <div class="top-item">
+                        <div><span>接入点位置：</span>华北电力大学</div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="js/findTaiqu.js"></script>
+</body>
+
+</html>

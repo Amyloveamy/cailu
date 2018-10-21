@@ -1,0 +1,34 @@
+// 采录设备列表
+// 跳转到 设备信息采录页面
+$("#cl-list .cl-lis").on("click", function() {
+    window.common_user.Click_href('../jlx_xinxi_cailu/jlx_xinxi_cailu.html');
+})
+
+// 查库 渲染页面
+function cailu_list() {
+
+
+
+
+}
+
+
+
+// 查库 渲染页面
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//缓存一个信息 跳转页面 按钮显示数量
+window.sessionStorage.setItem('btnNum', '3');

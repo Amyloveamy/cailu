@@ -1,0 +1,12 @@
+// 计量箱信息采录
+// 获取缓存 显示按钮数量
+var bunNum = window.sessionStorage.getItem('btnNum');
+
+console.log('bunNum====' + bunNum)
+if (bunNum == 3 && bunNum != '' && bunNum != null) {
+    $("#treeBtn").show();
+    $("#doubleBtn").hide();
+} else {
+    $("#doubleBtn").show();
+    $("#treeBtn").hide();
+}

@@ -1,0 +1,474 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+
+/* header 开始 */
+
+.corner-rw {
+    height: 100%;
+    position: absolute;
+    right: 0.2rem;
+    top: 0;
+    padding-top: .25rem;
+    color: #fff!important;
+    font-size: .26rem;
+}
+
+.corner-rw>div {
+    color: #fff!important;
+}
+
+
+/* header 结束 */
+
+
+/*内容盒子start*/
+
+.content>div {
+    height: 100%;
+    display: none;
+}
+
+.content>.content-active {
+    display: block;
+}
+
+
+/*内容盒子end*/
+
+
+/*底部导航栏start*/
+
+.bottom_tab {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 0.04rem solid #E2E2E2;
+}
+
+.bottom_tab .tab-item {
+    float: left;
+    width: 33%;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: .2rem;
+    font-size: .26rem;
+}
+
+.bottom_tab .tab-item .icon {
+    height: .48rem;
+    -webkit-background-size: .48rem .48rem !important;
+    background-size: .48rem .48rem !important;
+    margin-bottom: .1rem;
+    width: 100%
+}
+
+.bottom_tab .active-item .tab-label {
+    color: #6175ee;
+}
+
+.bottom_tab .icon-rw {
+    width: 100%;
+    background: url(./../../images/zhishi.png) no-repeat center;
+}
+
+.bottom_tab .active-item .icon-rw {
+    width: 100%;
+    background: url(./../../images/zhishi_active.png) no-repeat center;
+}
+
+.bottom_tab .icon-czt {
+    width: 100%;
+    background: url(./../../images/ketang.png) no-repeat center;
+}
+
+.bottom_tab .active-item .icon-czt {
+    width: 100%;
+    background: url(./../../images/ketang_active.png) no-repeat center;
+}
+
+.bottom_tab .icon-my {
+    width: 100%;
+    background: url(./../../images/my.png) no-repeat center;
+}
+
+.bottom_tab .active-item .icon-my {
+    width: 100%;
+    background: url(./../../images/my_active.png) no-repeat center;
+}
+
+
+/*底部导航栏end*/
+
+
+/* 任务start */
+
+
+/* tab栏 */
+
+.tab-box {
+    width: 100%;
+    height: 0.78rem;
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+
+.tab-box>.tab-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /*垂直居中*/
+    justify-content: center;
+    /*水平居中*/
+    /* color: #fff; */
+    font-size: .32rem;
+    position: relative;
+}
+
+.tab-box .tab-item.tab-active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: .02rem;
+    background-color: #2e98eb;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tab-box .tab-item.tab-active {
+    color: #2e98eb;
+}
+
+.tab-content>div {
+    display: none;
+}
+
+.tab-content>div.tab-con-active {
+    display: block;
+}
+
+
+/* 搜索框 */
+
+.ipt-box {
+    width: 100%;
+    background-color: #fff;
+    /* min-height: 1.2rem; */
+    height: 1.2rem;
+    padding-top: .3rem;
+    text-align: center;
+    position: relative;
+}
+
+.ipt-box input {
+    width: 90%;
+    height: .6rem;
+    padding: 0.1rem .1rem;
+    border: 1px solid #c8c8c8;
+    font-size: .28rem;
+    border-radius: .08rem;
+    padding-left: .6rem;
+}
+
+.ipt-box input::placeholder {
+    color: #c6c6c6;
+}
+
+.search-box {
+    width: .6rem;
+    height: .6rem;
+    position: absolute;
+    left: .4rem;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.ipt-box img {
+    height: 0.32rem;
+    width: 0.32rem;
+    padding-top: .14rem;
+    margin-left: .1rem;
+}
+
+
+/* 列表 */
+
+.list {
+    width: 100%;
+    overflow-y: scroll;
+    /* height: auto; */
+    height: 9.4rem;
+    padding-bottom: .4rem;
+}
+
+.lis-uls {
+    width: 100%;
+    height: auto;
+    margin-top: .2rem;
+}
+
+.lis-lis {
+    width: 100%;
+    height: 2.6rem;
+    background-color: #fff;
+    display: flex;
+    margin-bottom: .2rem;
+}
+
+.lis-lis .lis-lef {
+    width: .7rem;
+    height: 100%;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .22rem;
+}
+
+.lis-lis .lis-mid {
+    flex: 1;
+    height: 100%;
+    padding: .24rem 0rem .24rem .1rem;
+}
+
+.lis-lis .lis-mid>div {
+    font-size: .26rem;
+    line-height: .54rem;
+}
+
+.lis-lis .lis-mid>div>span {
+    display: inline-block;
+    width: 1.2rem;
+    text-align: right;
+    padding-right: .1rem;
+}
+
+.lis-lis .lis-rig {
+    width: 1.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: .2rem;
+}
+
+.lis-lis .lis-rig>div {
+    display: inline-block;
+}
+
+.sign {
+    width: .8rem;
+    height: .4rem;
+    font-size: .26rem;
+    line-height: .4rem;
+    background-color: #366ca7;
+    text-align: center;
+    color: #fff;
+}
+
+.color9191 {
+    background-color: #919191!important;
+}
+
+.colorred {
+    background: linear-gradient(#ff6134, #fe802f);
+}
+
+.lis-rig .icon {
+    width: .6rem;
+    height: .46rem;
+}
+
+.lis-rig .icon.daohang {
+    background: url(../../images/daohang_icon.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.colorf40c17 {
+    color: #f40c17!important;
+}
+
+
+/* 任务end */
+
+
+/* 功能start */
+
+.gongneng_content {
+    width: 100%;
+    height: auto;
+}
+
+.gongneng_content .uls {
+    margin-top: 0;
+}
+
+.gongneng_content .uls .lis:nth-child(1) {
+    border-top: 0;
+}
+
+.gongneng_content .uls .lis {
+    height: 1.56rem;
+}
+
+.gongneng_content .lis .li_left {
+    width: .82rem;
+    height: .82rem;
+    display: inline-block;
+}
+
+.gongneng_content .lis .li_left img {
+    width: .82rem;
+    height: .82rem;
+}
+
+.gongneng_content .uls .lis {
+    padding: .34rem .2rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.gongneng_content .uls .li_rig {
+    display: inline-block;
+    vertical-align: super;
+    padding-left: .3rem;
+}
+
+.gongneng_content .uls .li_rig .rig_con {
+    font-size: .24rem;
+}
+
+
+/* 下载工单弹窗start */
+
+.downPop {
+    width: 4.86rem;
+    height: 3.6rem;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: .2rem;
+    text-align: center;
+    display: none;
+    padding-top: .4rem;
+}
+
+.downPop.active {
+    display: block;
+}
+
+.downPop .pop-btn {
+    width: 2.02rem;
+    height: .7rem;
+    line-height: .7rem;
+    background-color: #366ca7;
+    color: #fff;
+    font-size: .28rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: .1rem;
+}
+
+.downPop .pop-txt {
+    font-size: .44rem;
+    padding-bottom: .3rem;
+}
+
+.downPop .pop-txt>span {
+    font-size: .6rem;
+    color: #366ca7;
+}
+
+
+/* 下载工单弹窗end */
+
+
+/* 功能end */
+
+
+/*我的开始*/
+
+.page_my .userInfoModule {
+    height: 2.88rem;
+    /*background: url("../../images/ywsl_my_bg_@2x.png") no-repeat center;*/
+    background: -webkit-linear-gradient(left bottom, #4e93f5, #366ca7);
+    background: -webkit-linear-gradient(left bottom, #4e93f5, #366ca7);
+    -webkit-background-size: 120% 120%;
+    background-size: 120% 120%;
+    padding: .86rem 0 0 .4rem;
+    color: #fff;
+    font-size: .3rem;
+}
+
+.page_my .userInfoModule>.userImg {
+    margin-right: .4rem;
+}
+
+.page_my .userInfoModule>.userImg>img {
+    height: 1rem;
+    width: 1rem;
+    border-radius: .5rem;
+}
+
+.page_my .userInfoModule .userNameASta {
+    line-height: .54rem;
+}
+
+.page_my .userInfoModule .details {
+    margin-right: .48rem;
+    margin-top: .3rem;
+}
+
+.page_my .userInforList {
+    margin-top: .2rem;
+}
+
+.page_my .userInforList li {
+    padding: 0 .35rem;
+}
+
+.page_my .userInforList li,
+.page_my .userInforList .exitLogin {
+    width: 100%;
+    border-bottom: 0.01rem solid #e1e1e1;
+    background-color: #fff;
+    font-size: .3rem;
+    color: #565656;
+}
+
+.page_my .userInforList li span {
+    height: .9rem;
+    line-height: .9rem;
+}
+
+.page_my .userInforList li img {
+    margin-top: .28rem;
+    width: .4rem;
+    height: .4rem;
+}
+
+.page_my .userInforList .userInImg img {
+    margin-right: .35rem;
+}
+
+.page_my .userInforList .exitLogin {
+    text-align: center;
+    height: .9rem;
+    line-height: .9rem;
+    /*background: -webkit-linear-gradient(top, #3b48ee, #6381f3);*/
+    /*background:linear-gradient(top, #3b48ee, #6381f3);*/
+}
+
+
+/* 我的结束 */

@@ -1,0 +1,109 @@
+// 计量箱信息采录
+// 获取缓存的列表数据
+var rewutData = window.sessionStorage.getItem('rewutData');
+console.log("rewutData====" + rewutData);
+
+
+
+// 获取缓存 显示按钮数量 start
+
+var bunNum = window.sessionStorage.getItem('btnNum');
+console.log('bunNum====' + bunNum)
+if (bunNum == 3 && bunNum != '' && bunNum != null) {
+    $("#treeBtn").show();
+    $("#doubleBtn").hide();
+} else {
+    $("#doubleBtn").show();
+    $("#treeBtn").hide();
+}
+// 获取缓存 显示按钮数量 end
+
+
+
+
+
+
+// 点击搜错图标  跳转到 查找台区页面 start
+
+$(".xuanze_xiang #findTaiqu").on("click", function() {
+
+    console.log("查找台区")
+    window.common_user.Click_href('../findTaiqu/findTaiqu.html');
+
+})
+
+
+// 点击搜错图标  跳转到 查找台区页面 end
+
+// 设备类型下拉框
+
+$("#gjshebei_leixing input").on("click", function() {
+    console.log("挂接设备类别===" + gjshebei_leixing_json);
+    openActionsheet("选择设备类型", gjshebei_leixing_json, $("#gjshebei_leixing input"));
+
+})
+
+
+// 设备类型下拉框
+// 表箱类型下拉框
+
+$("#biaoxiang_leixing input").on("click", function() {
+    console.log("挂接设备类别===" + biaoxiangleixing_json);
+    openActionsheet("选择表箱类型", biaoxiangleixing_json, $("#biaoxiang_leixing input"));
+
+})
+
+
+// 表箱类型下拉框
+
+// 材质类型下拉框
+$("#caizhi input").on("click", function() {
+    console.log("挂接设备类别===" + caizhi_json);
+    openActionsheet("选择表箱类型", caizhi_json, $("#caizhi input"));
+
+})
+
+
+
+// 材质类型下拉框
+
+// 资产性质下拉框
+$("#zichanxingzhi input").on("click", function() {
+    console.log("资产性质===" + zichanxingzhi_json);
+    openActionsheet("选择资产性质", zichanxingzhi_json, $("#caizhi input"));
+
+})
+
+
+
+// 资产性质下拉框
+
+// 城乡类别下拉框
+$("#chengxiang_leibie input").on("click", function() {
+    console.log("城乡类别===" + citygleixing_json);
+    openActionsheet("选择城乡类别", citygleixing_json, $("#chengxiang_leibie input"));
+
+})
+
+
+
+// 城乡类别下拉框
+
+// 挂接设备下拉框
+$("#guajieshebei_leixing input").on("click", function() {
+    console.log("挂接设备===" + guajieshebei_json);
+    openActionsheet("选择挂接设备", guajieshebei_json, $("#guajieshebei_leixing input"));
+
+})
+
+// 挂接设备下拉框
+
+
+// 相位下拉框
+$("#xiangwei input").on("click", function() {
+    console.log("挂接设备===" + xiangbie_json);
+    openActionsheet("选择挂接设备", xiangbie_json, $("#xiangwei input"));
+
+})
+
+// 相位下拉框

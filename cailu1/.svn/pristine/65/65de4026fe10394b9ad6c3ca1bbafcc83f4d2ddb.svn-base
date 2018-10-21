@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>计量箱组</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/mui.min.css" /> -->
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!--当前页面样式-->
+    <link rel="stylesheet" type="text/css" href="./../jlx_xinxi_cailu/css/jlx_xinxi_cailu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jlx_zu_cailu.css" />
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav header">
+        <a class="back mui-icon-left-nav mui-pull-left" id="go_back"></a>
+        <h1 class="mui-title">计量箱组</h1>
+    </header>
+
+    <div class="content">
+        <div class="bottom-list">
+            <form action="" class="">
+                <ul class="btm-uls">
+                    <!-- 分组名称 带搜索图标 -->
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">分组名称</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" placeholder="请输入信息">
+                            <img class="xuanzhe_xiang_tu scan" src="./../images/Generaloperation_icon_smellsearch32px@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">分组编号</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <span>2222</span>
+                        </div>
+                    </li>
+                    <!-- 下拉框 -->
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">设备类型</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                <option value="">杆塔</option>
+                                <option value="">分支箱</option>
+                                <option value="">变压器</option>
+                                <option value="">电缆头</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">表箱类型</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                    <option value="">单体表箱</option>
+                                    <option value="">合体表箱</option>
+                                    <option value="">虚拟表箱</option>
+                                </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">安装地址</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <span>马府新村11栋1单元</span>
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">行</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">列</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">材质</span>
+                        <div class="xuanze_xiang fr">
+                            <!-- <input type="text" placeholder="请输入信息"> -->
+                            <select name="" id="">
+                                <option value="">铁</option>
+                                <option value="">不锈钢</option>
+                                <option value="">合金</option>
+                                <option value="">塑料</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">管理单位</span>
+                        <div class="xuanze_xiang fr">
+                            <select name="" id="">
+                                <option value="">北京供电公司</option>
+                                
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">资产单位</span>
+                        <div class="xuanze_xiang fr">
+                            <input type="text" placeholder="请输入信息">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">资产性质</span>
+                        <div class="xuanze_xiang fr">
+                            <select name="" id="">
+                                <option value="">北京供电公司</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">城乡类别</span>
+                        <div class="xuanze_xiang fr">
+                            <select name="" id="">
+                                <option value="">城市</option>
+                                <option value="">农村</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="xinxilei fl">电压等级</span>
+                        <div class="xuanze_xiang fr">
+                            <select name="" id="">
+                                <option value="">交流380V</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <!-- 刷新按钮 -->
+                    <div class="refresh">
+                        <div class="ref-btn">刷新</div>
+                    </div>
+                    <ul class="btm-uls">
+                        <li class="btm-lis">
+                            <span class="required fl">*</span>
+                            <span class="xinxilei fl">坐标经度</span>
+                            <div class="xuanze_xiang fr">
+                                <span>123.3</span>
+                            </div>
+                        </li>
+                        <li class="btm-lis">
+                            <span class="required fl">*</span>
+                            <span class="xinxilei fl">坐标纬度</span>
+                            <div class="xuanze_xiang fr">
+                                <span>123.39</span>
+                            </div>
+                        </li>
+                        <li class="btm-lis">
+                            <!-- <span class="required fl">*</span> -->
+                            <span class="xinxilei fl">坐标高程</span>
+                            <div class="xuanze_xiang fr">
+                                <span>12.3</span>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+                    <!-- 输入信息 -->
+                    <li class="btm-lis mt40">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">挂接设备类型</span>
+                        <div class="xuanze_xiang fr">
+                            <select name="" id="">
+                                <option value="">x</option>
+                                <option value="">y</option>
+                                <option value="">z</option>
+                            </select>
+                            <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt="">
+                        </div>
+                    </li>
+                    <li class="btm-lis">
+                        <span class="required fl">*</span>
+                        <span class="xinxilei fl">挂接设备名称</span>
+                        <div class="xuanze_xiang fr">
+                            <span>**线12-1#</span>
+                            <!-- <img class="xuanzhe_xiang_tu" src="./../images/Generaloperation_icon_next@2x.png" alt=""> -->
+                        </div>
+                    </li>
+                </ul>
+
+            </form>
+
+            <!-- 一个按钮 -->
+            <div class="btn-box">
+                <div class="btn">保存</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="js/jlx_zu_cailu.js"></script>
+</body>
+
+</html>

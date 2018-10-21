@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>营配采录任务</title>
+    <!--基础依赖css文件-->
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <!--当前页面样式-->
+    <script type="text/javascript" src="../js/rem.js"></script>
+</head>
+
+<body id="app">
+    <!-- 头部start -->
+    <header id="header" class="header">
+        <h1 class="mui-title">营配采录任务</h1>
+        <!-- 下载工单 -->
+        <div class="corner-rw" id="tuxiang_icon">
+            <div>下载工单</div>
+        </div>
+    </header>
+    <!-- 头部end -->
+
+    <div class="content">
+        <!-- 任务start -->
+        <div class="renwu content-active" id="task">
+
+            <!-- tab栏start -->
+            <div class="tab-box">
+                <div class="tab-item tab-active" data-nav="daiban">待办</div>
+                <div class="tab-item" data-nav="yiwancheng">已完成</div>
+            </div>
+            <!-- tab栏end -->
+
+            <!-- tab内容start -->
+            <div class="tab-content">
+                <!-- 待办 -->
+                <div class="tab-con-item tab-con-active" id="daiban">
+                    <!-- 搜索框start -->
+                    <div class="ipt-box">
+                        <input type="text" class="searCh" placeholder="请输入流程名称或申请编号">
+                        <div class="search-box">
+                            <img class="searChImg" border="0" src="../images/Generaloperation_icon_smellsearch32px@2x.png">
+                        </div>
+
+                    </div>
+                    <!-- 搜索框end -->
+                    <div class="list">
+                        <ul class="lis-uls daiban">
+                            <li class="lis-lis">
+                                <div class="lis-lef">
+                                    高压新装
+                                </div>
+                                <div class="lis-mid">
+                                    <div>
+                                        <span>申请编号 :</span>
+                                        <div class="appNo">241555555111</div>
+                                    </div>
+                                    <div>
+                                        <span>户名 :</span>
+                                        <div class="consName">**有限公司北京市昌平区回龙观北农路2号</div>
+                                    </div>
+                                    <div>
+                                        <span>用电地址 :</span>
+                                        <div class="elecAddr">北京市昌平区回龙观北农路2号北京市昌平区回龙观北农路2号</div>
+                                    </div>
+                                    <div class="colorf40c17">
+                                        <span>预警时间 :</span>
+                                        <div class="warningDate">2017年9月30日</div>
+                                    </div>
+                                    <!-- 环节编号 -->
+                                    <div class="hiden">
+                                        <span>环节编号 :</span>
+                                        <div class="activNo">200200202</div>
+                                    </div>
+                                    <div class="hiden">
+                                        <span>供电单位 :</span>
+                                        <div class="orgNo">北京供电单位</div>
+                                    </div>
+
+                                </div>
+                                <div class="lis-rig">
+                                    <div class="icon daohang"></div>
+                                    <!-- 按钮背景色 灰色color9191  红色colorred  默认蓝色 -->
+                                    <div class="sign color9191">
+                                        签收
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="lis-lis">
+                                <div class="lis-lef">
+                                    高压新装
+                                </div>
+                                <div class="lis-mid">
+                                    <div>
+                                        <span>申请编号 :</span>
+                                        <div class="appNo">241555555111</div>
+                                    </div>
+                                    <div>
+                                        <span>户名 :</span>
+                                        <div class="consName">**有限公司</div>
+                                    </div>
+                                    <div>
+                                        <span>用电地址 :</span>
+                                        <div class="elecAddr">北京市昌平区回龙观北农路2号</div>
+                                    </div>
+                                    <div class="colorf40c17">
+                                        <span>预警时间 :</span>
+                                        <div class="warningDate">2017年9月30日</div>
+                                    </div>
+                                    <!-- 环节编号 -->
+                                    <div class="hiden">
+                                        <span>环节编号 :</span>
+                                        <div class="activNo">200200202</div>
+                                    </div>
+                                    <div class="hiden">
+                                        <span>供电单位 :</span>
+                                        <div class="orgNo">北京供电单位</div>
+                                    </div>
+
+                                </div>
+                                <div class="lis-rig">
+                                    <div class="icon daohang"></div>
+                                    <!-- 按钮背景色 灰色color9191  红色colorred  默认蓝色 -->
+                                    <div class="sign color9191">
+                                        签收
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- 已完成 -->
+                <div class="tab-con-item" id="yiwancheng">
+                    <!-- 搜索框start -->
+                    <div class="ipt-box">
+                        <input type="text" class="searCh" placeholder="请输入流程名称或申请编号">
+                        <div class="search-box">
+                            <img border="0" class="searChImg" src="../images/Generaloperation_icon_smellsearch32px@2x.png">
+                        </div>
+                    </div>
+
+                    <!-- 搜索框end -->
+                    <div class="list">
+                        <ul class="lis-uls yiban">
+                            <li class="lis-lis">
+                                <div class="lis-lef">
+                                    高压新装
+                                </div>
+                                <div class="lis-mid">
+                                    <div>
+                                        <span>申请编号 :</span>
+                                        <div class="appNo">241555555111</div>
+                                    </div>
+                                    <div>
+                                        <span>户名 :</span>
+                                        <div class="consName">**有限公司北京市昌平区回龙观北农路2号</div>
+                                    </div>
+                                    <div>
+                                        <span>用电地址 :</span>
+                                        <div class="elecAddr">北京市昌平区回龙观北农路2号北京市昌平区回龙观北农路2号</div>
+                                    </div>
+                                    <div class="colorf40c17">
+                                        <span>预警时间 :</span>
+                                        <div class="warningDate">2017年9月30日</div>
+                                    </div>
+                                    <!-- 环节编号 -->
+                                    <div class="hiden">
+                                        <span>环节编号 :</span>
+                                        <div class="activNo">200200202</div>
+                                    </div>
+                                    <div class="hiden">
+                                        <span>供电单位 :</span>
+                                        <div class="orgNo">北京供电单位</div>
+                                    </div>
+
+                                </div>
+                                <div class="lis-rig">
+                                    <div class="icon daohang"></div>
+                                    <!-- 按钮背景色 灰色color9191  红色colorred  默认蓝色 -->
+                                    <div class="sign">
+                                        完成
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- tab内容end -->
+
+        </div>
+        <!-- 任务end -->
+
+        <!-- 功能start -->
+        <div class="renwu" id="operation">
+            <div class="gongneng_content">
+                <ul class="uls">
+                    <li class="lis" id="jiliang_zu">
+                        <div class="li_left">
+                            <img src="../images/changjian_wenti.png" alt="">
+                        </div>
+                        <div class="li_rig">
+                            <div class="rig_title">
+                                计量箱（柜）
+                            </div>
+                            <div class="rig_con">
+                                采集计量箱空间及属性数据
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 功能end -->
+
+        <!-- 我的start -->
+        <div class="renwu page_my" id="my">
+
+            <div class="userInfoModule clearfix">
+                <div class="userImg fl" id="myTest">
+                    <img src="../images/my_head_default@2x.png" />
+                </div>
+                <div class="userNameASta fl">
+                    <p>
+                        <span class="userState userName" id="userName">合肥供电</span>&nbsp;
+                        <span id="userState">HF25</span>
+                    </p>
+                    <p>
+                        <span class="userMarkNumLable">营销用户账号：</span>
+                        <span class="userMarkNum" id="userNo"></span>
+                    </p>
+                </div>
+                <p class="details fr" id="details">详情></p>
+            </div>
+            <!--个人信息end-->
+            <div class="userInforList">
+                <ul class="userInstallUl">
+                    <li class="userInstallUlLi clearfix" id="binding">
+                        <span class="userInImg fl"><img src="../images/set_icon_bound@2x.png" /></span>
+                        <span class="fl">账号绑定</span>
+                        <span class="gotoImg fr"><img src="../images/Generaloperation_icon_next@2x.png" /></span>
+                    </li>
+                    <li class="userInstallUlLi clearfix" id="about">
+                        <span class="userInImg fl"><img src="../images/Set_icon_about@2x.png" /></span>
+                        <span class="fl">关于我们</span>
+                        <span class="gotoImg fr"><img src="../images/Generaloperation_icon_next@2x.png" /></span>
+                    </li>
+                </ul>
+                <div class="exitLogin" id="exitLogin">退出登录</div>
+
+            </div>
+        </div>
+        <!-- 我的end -->
+
+    </div>
+
+
+    <!-- 底部导航start -->
+    <nav class="bottom_tab clearfix">
+        <div class="tab-item czt homepageNav active-item" data-nav="task">
+            <p class="icon icon-rw"></p>
+            <p class="tab-label">任务</p>
+        </div>
+        <div class="tab-item msg homepageNav" data-nav="operation">
+            <p class="icon icon-czt"></p>
+            <p class="tab-label">功能</p>
+        </div>
+
+        <div class="tab-item my homepageNav" data-nav="my">
+            <p class="icon icon-my"></p>
+            <p class="tab-label">我的</p>
+        </div>
+    </nav>
+    <!-- 底部导航end -->
+
+    <!-- 下载工单弹窗start -->
+    <!-- 遮罩 mui-active显示出来 -->
+    <div class="mui-backdrop"></div>
+    <!-- 加上active显示 -->
+    <div class="downPop">
+        <div class="pop-txt">已下载工单</div>
+        <div class="pop-txt"> <span>23</span>条</div>
+        <div class="pop-btn">确定</div>
+    </div>
+
+    <!-- 下载工单弹窗end -->
+
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/wu-ui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/bzyd.common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

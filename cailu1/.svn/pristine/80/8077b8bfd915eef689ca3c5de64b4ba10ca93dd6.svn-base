@@ -1,0 +1,166 @@
+// 计量箱信息采录
+// 获取缓存的列表数据
+var rewutData = window.sessionStorage.getItem('rewutData');
+console.log("rewutData====" + rewutData);
+
+
+
+// 获取缓存 显示按钮数量
+
+var bunNum = window.sessionStorage.getItem('btnNum');
+console.log('bunNum====' + bunNum)
+if (bunNum == 3 && bunNum != '' && bunNum != null) {
+    $("#treeBtn").show();
+    $("#doubleBtn").hide();
+} else {
+    $("#doubleBtn").show();
+    $("#treeBtn").hide();
+}
+// 获取缓存 显示按钮数量
+
+// 渲染页面start
+function cailu(Num, arr) {
+
+    var txt = window.android.seletDataJS(Num, arr);
+    window.android.show('这是本页数据' + txt);
+    try {
+        if (txt.indexOf("data") != -1) {
+            window.android.show('在try上是否有本页数据' + txt);
+            txt = JSON.parse(txt);
+
+            // 头部信息渲染
+            var html = '';
+            html += '<li class="top-lis double">\n' +
+                '                    <div>\n' +
+                '                        <span>申请编号：</span>\n' +
+                '                        <div class="appNo"> 565454</div>\n' +
+                '                    </div>\n' +
+                '                    <div>\n' +
+                '                        <span>用户编号：</span>\n' +
+                '                        <div class="consNo"> 4567890</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis">\n' +
+                '                    <div><span>用户名称：</span>\n' +
+                '                        <div class="consName">华北电力大学</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis">\n' +
+                '                    <div>\n' +
+                '                        <span>用电地址：</span>\n' +
+                '                        <div class="elecAddr">华北电力大学</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis double">\n' +
+                '                    <div class="top-item">\n' +
+                '                        <span>接线方式：</span>\n' +
+                '                        <div class="wiringMode">无</div>\n' +
+                '                    </div>\n' +
+                '                    <div class="top-item">\n' +
+                '                        <span>电压等级：</span>\n' +
+                '                        <div class="voltCode">220V</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis">\n' +
+                '                    <div>\n' +
+                '                        <span>线路名称：</span>\n' +
+                '                        <div class="lineName">220V</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis">\n' +
+                '                    <div>\n' +
+                '                        <span>台区名称：</span>\n' +
+                '                        <div class="tgName">华北电力大学</div>\n' +
+                '                    </div>\n' +
+                '                </li>\n' +
+                '                <li class="top-lis double">\n' +
+                '                    <div>\n' +
+                '                        <span>变压器标识：</span>\n' +
+                '                        <div class="tranIde">4567890</div>\n' +
+                '                    </div>\n' +
+                '                    <div>\n' +
+                '                        <span>计量箱方案标识：</span>\n' +
+                '                        <div class="boxSchemeId">4567890</div>\n' +
+                '                    </div>\n' +
+                '                </li>'
+
+
+
+            $('.top-uls').html(html);
+
+        } else {
+            window.android.show('查询数据为空');
+        }
+
+    } catch (e) {
+        window.android.show('----------异常报错---------');
+    }
+
+
+
+
+
+}
+
+cailu("30567", [window.sessionStorage.getItem("userNo"), "拓扑关系"]);
+
+
+
+// 渲染页面end
+
+
+
+
+
+//挂接设备类型下拉框
+$("#gjshebei_leixing").on("click", function() {
+    console.log("挂接设备类别===" + gjshebei_leixing_json);
+    openActionsheet("选择挂接设备类型", gjshebei_leixing_json, $("#gjshebei_leixing input"));
+
+})
+
+
+//挂接设备类型下拉框
+
+//挂接设备名称下拉框
+$("#gjshebei_name input").on("click", function() {
+    console.log("挂接设备名称")
+    openActionsheet("选择挂接设备名称", gjshebei_name_json, $("#gjshebei_name input"));
+
+})
+
+
+//挂接设备名称下拉框
+// 点击刷新图标
+$("#shuaxin_icon").on("click", function() {
+
+    openToast("你点击了刷新图标")
+
+})
+
+// 点击刷新图标
+// 相别下拉框
+$("#xiangbie").on("click", function() {
+    console.log("相别")
+    openActionsheet("请选择相别", xiangbie_json, $("#xiangbie input"), xiangbie);
+
+})
+
+
+// 相别下拉框
+function xiangbie() {
+    console.log("你选择了相别中的一项")
+}
+
+
+
+
+// 点击刷新按钮
+$("#refresh").on("click", function() {
+    openToast("你点击了刷新按钮")
+
+})
+
+
+
+// 点击刷新按钮
